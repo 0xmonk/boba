@@ -22,6 +22,8 @@ jobs:
       - name: golangci-lint gas-oracle
         uses: golangci/golangci-lint-action@v2
         with:
+          skip-pkg-cache: true
+          skip-build-cache: true
           version: v1.29
           working-directory: go/gas-oracle
       - name: golangci-lint batch-submitter
